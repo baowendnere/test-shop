@@ -17,6 +17,9 @@
                 <h1>
                     Nos derniers produits !
                 </h1>
+                <h1>
+                    test git
+                </h1>
             </div>
             {{-- <div class="col-md-12"> --}}
                 @foreach ($products as $product)
