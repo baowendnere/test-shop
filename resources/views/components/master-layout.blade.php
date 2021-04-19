@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name').$title }}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('welcome') }}">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('welcome') }}"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('products.index') }}">Produits</a>
+                    <a class="nav-link" href="{{ route('products.index') }}"><i class="fas fa-table    "></i> Produits</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">A propos</a>
+                    <a class="nav-link" href="#"><i class="fas fa-info    "></i> A propos</a>
                 </li>
             </ul>
             {{-- <form class="form-inline my-2 my-lg-0">
@@ -43,7 +43,7 @@
                 
                 @else
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user    "></i> {{ Auth::user()->name }}</a>
                         <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('deconnexion').submit()">Deconnexion</a>
                         <form style="display: none" id="deconnexion" method="post" action="{{ route('logout') }}">
