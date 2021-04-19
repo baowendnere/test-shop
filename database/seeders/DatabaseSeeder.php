@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RoleSeeder::class,
-            CategorySeeder::class
+            //CategorySeeder::class
             ]
         );
         // Product::factory(50)->create();
